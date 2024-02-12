@@ -1,0 +1,121 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+.inventory {
+  position: absolute;
+  margin: 1rem;
+  background: #ffffff;
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+  border-radius: 3px;
+  top: 13%;
+  left: 7%;
+  width: 80%;
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    padding: 0rem 1rem;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1rem;
+    }
+  }
+  &__nav-right {
+    @include tablet {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+  }
+  &__heading {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    @include page-header;
+    @include tablet {
+      padding: 0rem;
+    }
+  }
+  &__search {
+    background-image: url("../../assets/Icons/search-24px.svg");
+    background-repeat: no-repeat;
+    // background-position: 13.5rem;
+    background-position: 95%;
+    margin-top: 0.5rem;
+    width: 98%;
+    margin-bottom: 1rem;
+    @include input;
+
+    &::placeholder {
+      color: $secondary-color-slate;
+      padding-left: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @include tablet {
+      width: 11.5625rem;
+      height: 2.25rem;
+      margin: 0;
+      background-position: 9.5rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &__add {
+    @include add-button;
+
+    @include tablet {
+      width: 11.5625rem;
+    }
+  }
+
+  &__header {
+    display: none;
+
+    @include table-header;
+    @include tablet {
+      background-color: $background-color-grey;
+      display: flex;
+      justify-content: space-between;
+      height: 1.875rem;
+      padding: 0rem 2rem;
+    }
+  }
+  &__small-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 27%;
+  }
+  &__header-cat {
+    display: flex;
+    align-items: center;
+    // width: 160px;
+
+    &--1 {
+      width: 18%;
+    }
+    &--2 {
+      width: 20%;
+    }
+    &--3 {
+      width: 17%;
+    }
+    &--4 {
+      width: 17%;
+    }
+    &--5 {
+      width: 18%;
+    }
+  }
+
+  &__header-sort {
+    scale: 60%;
+  }
+}

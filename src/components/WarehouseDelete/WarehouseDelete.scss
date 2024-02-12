@@ -1,0 +1,82 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/typography' as *;
+
+.delete-modal{
+&__title {
+    @include page-header;
+    margin: 1.5rem 0;
+
+    @include tablet {}
+
+
+}
+
+&--diplay {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include tablet {
+        height: unset;
+
+
+    }
+}
+
+&__paragraphe {
+    font-size: .8125rem;
+    line-height: 1.5625rem;
+
+
+
+    @include tablet {
+        width: 80%;
+        margin-bottom: 1.5rem;
+        font-size: .875rem;
+
+    }
+}
+
+}
+
+
+.icon__container {
+width: 100%;
+display: flex;
+justify-content: flex-end;
+}
+
+.form--display {
+display: flex;
+margin-bottom: 1rem;
+
+@include tablet {
+    justify-content: flex-end;
+    width: 100%;
+
+}
+}
+
+
+.button-delete {
+@include delete-button;
+
+@include tablet {
+    width: 72px;
+}
+
+
+}
+
+.button-cancel {
+@include cancel-button;
+margin-right: 1rem;
+
+@include tablet {
+    width: 72px;
+}
+
+
+}

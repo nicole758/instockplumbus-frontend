@@ -1,0 +1,16 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.footer {
+  display: none;
+  background-color: $background-color-grey;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  color: $secondary-color-slate;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12vh;
+}

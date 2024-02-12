@@ -1,0 +1,113 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+
+
+.mobile {
+  border-bottom: 1px solid $secondary-color-cloud;
+  @include tablet {
+    display: none;
+  }
+  &__top {
+    display: flex;
+    gap: 4rem;
+    padding: 1rem 1rem;
+  }
+
+  &__left,
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 40%;
+  }
+  &__heading {
+    @include table-header;
+  }
+
+  &__btns {
+    display: flex;
+    gap: 8rem;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+  }
+  &__content {
+    @include body-small;
+
+    &--blue {
+      color: $primary-color-blue;
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__chev-icon {
+    scale: 60%;
+    align-items: center;
+  }
+}
+
+.tablet {
+  display: none;
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $secondary-color-cloud;
+    padding: 1.5rem 2rem;
+  }
+  &__content--1 {
+    display: flex;
+    align-items: center;
+  }
+  &__container--1 {
+    color: $primary-color-blue;
+    width: 21%;
+  }
+
+  &__content--2 {
+    width: 18%;
+  }
+
+  &__content--3 {
+    width: 17%;
+  }
+  &__small-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+  }
+
+  &__content--4 {
+    width: 17%;
+    padding-left: 2rem;
+  }
+
+  &__content--5 {
+    width: 18%;
+  }
+
+  &__btns {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+.instock {
+  color: $supporting-color-green;
+  background-color: rgb(216 240 216/ 43%);
+  border-radius: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  width: 6rem;
+}
+.outstock {
+  color: $supporting-color-red;
+  background-color: rgb(249 218 207 / 43%);
+  display: flex;
+  border-radius: 20px;
+  width: 6rem;
+  align-items: center;
+  justify-content: space-around;
+}

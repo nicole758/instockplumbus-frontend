@@ -1,0 +1,172 @@
+@import "../../styles/partials/typography";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+
+.add {
+    margin: 1rem;
+    background: $primary-color-white;
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    border-radius: 3px;
+
+    @include tablet {
+        margin: 2rem;
+    }
+
+    @include desktop {
+        margin: 8.125rem;
+    }
+
+    &__top {
+
+        &-header {
+            border-bottom: 1px solid $secondary-color-cloud;
+            display: flex;
+            align-items: center;
+            padding: 2rem 1rem 1rem 1rem;
+            gap: .5rem;
+
+            @include desktop {
+                padding: 3rem 1rem 2rem 2rem;
+            }
+
+        }
+
+        &-title {
+            @include page-header;
+            width: 100%;
+        }
+    }
+
+    &__flex {
+        @include tablet {
+            display: flex;
+        }
+
+        @include desktop {
+            padding: 2rem 2rem 0.5rem 2rem;
+        }
+    }
+
+    &__left {
+        padding: 1rem 1rem 0 1rem;
+        border-bottom: 1px solid $secondary-color-cloud;
+
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            padding-right: 2rem;
+            border-bottom: none;
+            border-right: 1px solid $secondary-color-cloud;
+            width: 100%;
+        }
+
+        @include desktop {
+            margin: 1rem 0 0 1rem;
+            padding: 0 2.5rem 1rem 0;
+        }
+
+        &-input {
+            @include input;
+            width: 100%;
+            margin-bottom: 1rem;
+
+            &::placeholder {
+                padding-top: .6rem;
+                padding-left: 1rem;
+            }
+        }
+
+        &-title {
+            @include subheader;
+            padding-bottom: 1rem;
+        }
+
+        &-name {
+            @include llb;
+        }
+    }
+
+    &__right {
+        padding: 1rem 1rem 0 1rem;
+
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            width: 100%
+        }
+
+        @include desktop {
+            padding: 0;
+            margin: 1rem;
+            margin: 1rem 0 0 0;
+            padding: 0 0 1rem 2rem;
+        }
+
+        &-input {
+            @include input;
+            width: 100%;
+            margin-bottom: 1rem;
+
+            &::placeholder {
+                padding-top: .6rem;
+                padding-left: 1rem;
+            }
+        }
+
+        &-title {
+            @include subheader;
+            padding-bottom: 1rem;
+        }
+
+        &-name {
+            @include llb;
+        }
+    }
+
+    &__buttons {
+        background-color: $background-color-grey;
+        display: flex;
+        padding: 1rem;
+        gap: 1rem;
+
+        @include tablet {
+            justify-content: flex-end;
+        }
+
+        @include desktop {
+            padding-right: 2rem;
+        }
+
+        &-add {
+            @include add-button;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include tablet {
+                width: 8.625rem;
+                justify-content: normal;
+                padding-left: .4rem;
+            }
+
+            @include desktop {
+                justify-content: flex-start;
+            }
+        }
+
+        &-cancel {
+            @include cancel-button;
+
+            @include tablet {
+                width: 4.5rem;
+            }
+        }
+
+        &-icon {
+            fill: $primary-color-white;
+            scale: 50%;
+
+        }
+    }
+}

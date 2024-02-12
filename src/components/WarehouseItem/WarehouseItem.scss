@@ -1,0 +1,116 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/typography' as *;
+
+.det {
+    @include tablet {
+        border-top: none;
+        border-bottom: 1px solid $secondary-color-cloud;
+        flex-direction: column;
+    }
+   .mobile {
+    @include tablet {
+        display: none;
+        
+    }
+   }
+
+   .desktop {
+    display: none;
+    @include tablet {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    &__cont {
+        @include tablet {
+                 width: 140px; 
+                 display: flex;
+                 flex-direction: column;
+                 justify-content: center;
+        }
+    }
+   }
+
+    border-top: 1px solid $secondary-color-cloud;
+    @include tablet {
+        display: flex;
+        padding-left: 2rem;
+        flex-direction: column;
+    }
+
+    &__hidden {
+        @include tablet {
+            display: none;
+        }
+    }
+   &__top {
+    display: flex;
+    margin: 1rem 1.5rem 1rem 1.5rem; 
+    @include tablet {
+        margin: 0;
+    }
+   }
+
+   &__left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        gap: .3rem;
+     }
+   }
+
+   &__right  {
+     display: flex;
+     flex-direction: column;
+     gap: 1.5rem;
+   }
+
+   &__heading {
+    @include table-header;
+
+    &--hidden {
+        display: none;
+        @include table-header
+    }
+   }
+
+   &__content {
+    @include body-medium;
+
+    &-icon {
+        scale: 75%;
+
+    }
+    &-p {
+        align-items: center;
+    }
+    &--blue {
+        @include body-medium;
+        color: $primary-color-blue;
+        font-weight: 600;
+        display: flex;
+        align-content: center;
+    }
+   }
+
+   &__btns {
+    margin: 1rem 1.3rem 1rem 1rem;
+    display:flex;
+    justify-content: space-between;
+    @include tablet {
+        gap:1rem;
+        width: 160px;
+        justify-content: center;
+        margin: 2rem 0 2rem 0;
+    }
+
+   }
+
+}

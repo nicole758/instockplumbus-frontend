@@ -1,0 +1,101 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/typography' as *;
+
+
+.warehouse {
+    @include pages--layout;
+
+
+    &__nav {
+        padding: 1rem;
+
+        @include tablet {
+            display: flex;
+            margin: 0 2rem 0 1rem;
+            justify-content: space-between;
+        }
+
+        &-right {
+            @include tablet {
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+            }
+        }
+    }
+
+
+    &__heading {
+        @include page-header;
+        padding-top: 1rem;
+    }
+
+    &__search {
+        background-image: url('../../assets/Icons/search-24px.svg');
+        background-repeat: no-repeat;
+        background-position: 13.5rem;
+        margin-top: .5rem;
+        width: 98%;
+        @include input;
+
+
+        &::placeholder {
+            color: $secondary-color-slate;
+            padding-left: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @include tablet {
+            width: 11.5625rem;
+            height: 2.25rem;
+            margin: 0;
+            background-position: 9.5rem;
+
+        }
+    }
+
+    &__add {
+        margin-top: 1rem;
+        @include add-button;
+
+        @include tablet {
+            margin-top: 0;
+            width: 11.5625rem;
+
+        }
+
+    }
+
+    &__header {
+        display: none;
+
+        @include tablet {
+            height: 2.5rem;
+            background-color: $background-color-grey;
+            display: flex;
+            justify-content: space-between;
+            @include table-header;
+            padding-left: 2rem;
+        }
+
+        &-cat {
+            @include tablet {
+                display: flex;
+                align-items: center;
+                width: 160px;
+
+                &--mod {
+                    width: 8rem;
+                }
+            }
+        }
+
+        &-spaced {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

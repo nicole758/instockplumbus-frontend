@@ -1,0 +1,42 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+@font-face {
+    font-family:'TitilliumWeb' ;
+    src: url(../../assets/Fonts/TitilliumWeb-Bold.ttf) format(truetype);
+    src: url(../../assets/Fonts/Alternative_fonts/Titillium-Bold.otf) format(opentype);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family:'TitilliumWeb' ;
+    src: url(../../assets/Fonts/TitilliumWeb-SemiBold.ttf) format(truetype);
+    src: url(../../assets/Fonts/Alternative_fonts/Titillium-Semibold.otf) format(opentype);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family:'TitilliumWeb' ;
+    src: url(../../assets/Fonts/TitilliumWeb-Regular.ttf) format(truetype);
+    src: url(../../assets/Fonts/Alternative_fonts/Titillium-Regular.otf) format(opentype);
+    font-weight: 400;
+}
+
+.header {
+
+    &-buttons__text {
+        color: $secondary-color-cloud;
+        font-weight: 500;
+        font-size: .8125rem;
+
+        @include tablet {
+            font-size: .875rem;
+        }
+
+        &-active {
+            color: white;
+            font-weight: 500;
+            font-size: .8125rem;
+        }
+    }
+}

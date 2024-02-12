@@ -1,0 +1,101 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/typography' as *;
+
+.header {
+    background-color: $background-color-graphite;
+    height: 8.5rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 1.6875rem 2rem 0 2rem;
+        height: 11.625rem;
+    }
+
+    @include desktop {
+        padding: 1.6875rem 8.125rem 0 8.125rem;
+    }
+
+    &__logo {
+        padding-top: 0.5rem;
+        width: 128px;
+        padding-bottom: 1rem;
+
+        @include tablet {
+            width: 8rem;
+            padding-top: .25rem;
+        }
+    }
+
+    &-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: $background-color-graphite;
+
+        &__bg {
+
+            &-wh {
+                width: 45vw;
+                height: 2.25rem;
+                border-radius: 1.25rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &--active {
+                    background-color: $primary-color-black;
+                    width: 45vw;
+                    height: 2.25rem;
+                    border-radius: 1.25rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center; 
+                }
+
+                @include tablet {
+                    width: 6.6875rem;
+                    height: 2.375rem;
+                }
+            }
+
+            &-inv {
+                width: 45vw;
+                height: 2.25rem;
+                border-radius: 1.25rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &--active {
+                    background-color: $primary-color-black;
+                    width: 45vw;
+                    height: 2.25rem;
+                    border-radius: 1.25rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center; 
+                }
+
+                @include tablet {
+                    width: 5.625rem;
+                    height: 2.375rem;
+                    justify-content: flex-end;
+                }
+            }
+        }
+
+        &__text {
+
+            &-active {
+            background-color: $primary-color-black;
+            }
+        }
+    }
+}
